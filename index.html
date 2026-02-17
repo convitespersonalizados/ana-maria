@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ana Maria ❤️</title>
+<title>Ana Maria 💖 | Homenagem Especial</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <style>
 * {
@@ -16,173 +17,530 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #3a0ca3, #7209b7);
-    color: white;
+    background: linear-gradient(135deg, #0f0c1f, #1a1a3a, #2d1b4e);
+    color: #fff;
     overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 77, 109, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(114, 9, 183, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 800;
-    background: linear-gradient(45deg, #ff4d6d, #ffd6ff);
+    background: linear-gradient(45deg, #ff4d6d, #ff9ebb, #ffd6ff, #c77dff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient 5s ease infinite;
+    margin-bottom: 20px;
+    text-shadow: 0 0 30px rgba(255, 77, 109, 0.5);
+    letter-spacing: 2px;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .hero p {
-    font-size: 1.4rem;
-    margin-top: 20px;
-    max-width: 700px;
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.8;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .section {
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
+    position: relative;
 }
 
 .card {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 20px;
-    max-width: 800px;
+    padding: 50px 40px;
+    border-radius: 30px;
+    max-width: 900px;
     margin: auto;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
 
 .card h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #ffd6ff, #ff4d6d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .poema {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.8rem;
-    line-height: 1.8;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+    line-height: 1.6;
+    color: #ffd6ff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-footer {
-    text-align: center;
+.poema span {
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.quote {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #ffd6ff;
+    position: relative;
     padding: 30px;
-    opacity: 0.7;
 }
 
-/* CORAÇÕES */
-.heart {
-    position: fixed;
+.quote::before,
+.quote::after {
+    content: '"';
+    font-size: 4rem;
+    color: rgba(255, 77, 109, 0.5);
+    position: absolute;
+    font-family: serif;
+}
+
+.quote::before {
     top: -10px;
-    color: #ff4d6d;
-    font-size: 20px;
-    animation: fall linear forwards;
+    left: -10px;
 }
 
-@keyframes fall {
-    to {
-        transform: translateY(110vh);
-        opacity: 0;
-    }
+.quote::after {
+    bottom: -30px;
+    right: -10px;
+    transform: rotate(180deg);
+}
+
+.qualidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.qualidade-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.qualidade-item:hover {
+    background: rgba(255, 77, 109, 0.2);
+    transform: scale(1.05);
+    border-color: #ff4d6d;
+}
+
+.qualidade-item i {
+    font-size: 2.5rem;
+    color: #ff4d6d;
+    margin-bottom: 15px;
+}
+
+.qualidade-item p {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 button {
-    margin-top: 30px;
-    padding: 15px 40px;
-    font-size: 1rem;
+    margin-top: 40px;
+    padding: 18px 50px;
+    font-size: 1.2rem;
     border: none;
-    border-radius: 50px;
-    background: linear-gradient(45deg, #ff4d6d, #ff758f);
+    border-radius: 60px;
+    background: linear-gradient(45deg, #ff4d6d, #ff758f, #ff9ebb);
     color: white;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(255, 77, 109, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+button:hover::before {
+    left: 100%;
 }
 
 button:hover {
     transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(255, 77, 109, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* CORAÇÕES FLUTUANTES */
+.heart {
+    position: fixed;
+    font-size: 24px;
+    animation: floatUp linear forwards;
+    z-index: 9999;
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(255, 77, 109, 0.5));
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ESTRELAS CADENTES */
+.star {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: shootingStar linear forwards;
+    z-index: 9998;
+}
+
+@keyframes shootingStar {
+    0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+        width: 2px;
+        height: 2px;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-200px) translateY(200px);
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+    }
+}
+
+.contador {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.destaque {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ff4d6d;
+    text-shadow: 0 0 20px rgba(255, 77, 109, 0.5);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .poema {
+        font-size: 1.8rem;
+    }
+    
+    .card {
+        padding: 30px 20px;
+    }
 }
 </style>
 </head>
 <body>
 
-<!-- MÚSICA -->
-<audio autoplay loop>
-    <source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav" type="audio/wav">
+<!-- MÚSICA ROMÂNTICA -->
+<audio autoplay loop volume="0.3">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
 </audio>
 
+<!-- HERO SECTION -->
 <section class="hero">
-    <h1>Ana Maria: Uma Homenagem Especial ❤️</h1>
+    <h1>Ana Maria <span style="font-size: 4rem;">💖</span></h1>
+    <div class="contador">
+        <i class="fas fa-heart" style="color: #ff4d6d;"></i> 
+        Uma homenagem eterna 
+        <i class="fas fa-heart" style="color: #ff4d6d;"></i>
+    </div>
     <p>
-        Ana Maria transcende a beleza convencional; ela é uma presença marcante. Sua inteligência vai além do comum, revelando uma mente verdadeiramente brilhante. Mais do que carismática, ela irradia uma energia contagiante que transforma positivamente qualquer ambiente.
+        <i class="fas fa-quote-left" style="color: #ff4d6d; opacity: 0.5;"></i>
+        Ana Maria transcende a beleza convencional; ela é uma presença marcante que ilumina todos ao redor. 
+        Sua inteligência vai além do comum, revelando uma mente verdadeiramente brilhante e uma alma rara. 
+        Mais do que carismática, ela irradia uma energia contagiante que transforma positivamente qualquer ambiente, 
+        deixando por onde passa um rastro de luz e inspiração.
+        <i class="fas fa-quote-right" style="color: #ff4d6d; opacity: 0.5;"></i>
     </p>
-    <button onclick="alert('Você é simplesmente incrível 💖')">
-        Você é Única
+    <button onclick="mostrarMensagem()">
+        <i class="fas fa-star"></i> Você é Única <i class="fas fa-star"></i>
     </button>
 </section>
 
+<!-- SOBRE SECTION -->
 <section class="section">
     <div class="card">
-        <h2>Sobre Ana Maria ✨</h2>
-        <p>
-            Com uma beleza que ilumina qualquer espaço, Ana Maria possui uma mente admirável e um carisma que desarma com um sorriso. Formada em Recursos Humanos, sua verdadeira especialidade reside na capacidade ímpar de tocar corações e inspirar a todos ao seu redor.
+        <h2><i class="fas fa-crown"></i> Sobre Ana Maria <i class="fas fa-crown"></i></h2>
+        <p style="font-size: 1.3rem; margin-bottom: 30px;">
+            Com uma beleza que ilumina qualquer espaço, Ana Maria possui uma mente admirável e um carisma que desarma com um simples sorriso. 
+            Formada em Recursos Humanos, sua verdadeira especialidade reside na capacidade ímpar de tocar corações e inspirar a todos ao seu redor.
         </p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="card">
-        <h2>Poema para Ana: A Essência da Perfeição 🌹</h2>
-        <div class="poema">
-            Se a perfeição pudesse ser traduzida em nome,<br>
-            Ana Maria seria sua mais pura forma.<br><br>
-
-            Em seus olhos, o infinito se revela,<br>
-            em seu sorriso, um abrigo que nos anela.<br><br>
-
-            Sua inteligência é a luz que nos guia,<br>
-            seu carisma, a mais doce melodia.<br><br>
-
-            E se o amor fosse uma arte a ser ensinada,<br>
-            Ana Maria seria a mestra mais amada.
+        
+        <div class="qualidades-grid">
+            <div class="qualidade-item">
+                <i class="fas fa-gem"></i>
+                <p>Beleza Radiante</p>
+            </div>
+            <div class="qualidade-item">
+                <i class="fas fa-brain"></i>
+                <p>Inteligência Brilhante</p>
+            </div>
+            <div class="qualidade-item">
+                <i class="fas fa-heart"></i>
+                <p>Carisma Único</p>
+            </div>
+            <div class="qualidade-item">
+                <i class="fas fa-hand-holding-heart"></i>
+                <p>Empatia Profunda</p>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- POEMA SECTION -->
 <section class="section">
     <div class="card">
-        <h2>Uma Referência Inspiradora 🔥</h2>
-        <p style="font-size:1.3rem;">
-            “Algumas mulheres são raras. Outras são extraordinárias. E então, existe Ana Maria, que transcende a todos, alcançando um patamar onde poucos chegam.”
+        <h2><i class="fas fa-feather"></i> Poema para Ana <i class="fas fa-feather"></i></h2>
+        <div class="poema">
+            <span>Se a perfeição pudesse ser traduzida em nome,</span><br>
+            <span>Ana Maria seria sua mais pura forma.</span><br><br>
+            
+            <span>Em seus olhos, o infinito se revela,</span><br>
+            <span>em seu sorriso, um abrigo que nos anela.</span><br><br>
+            
+            <span>Sua inteligência é a luz que nos guia,</span><br>
+            <span>seu carisma, a mais doce melodia.</span><br><br>
+            
+            <span>E se o amor fosse uma arte a ser ensinada,</span><br>
+            <span>Ana Maria seria a mestra mais amada.</span><br><br>
+            
+            <span>Em cada gesto, uma poesia,</span><br>
+            <span>em cada palavra, magia e harmonia.</span>
+        </div>
+    </div>
+</section>
+
+<!-- INSPIRAÇÃO SECTION -->
+<section class="section">
+    <div class="card">
+        <h2><i class="fas fa-quote-right"></i> Uma Referência Inspiradora <i class="fas fa-quote-left"></i></h2>
+        <div class="quote">
+            “Algumas mulheres são raras. Outras são extraordinárias.<br>
+            <span class="destaque">Ana Maria</span> transcende a todos, alcançando um patamar onde poucos chegam.<br>
+            Ela não é apenas especial - ela é única, insubstituível e eternamente marcante.”
+        </div>
+        <p style="margin-top: 40px; font-size: 1.2rem;">
+            <i class="fas fa-star" style="color: #ffd700;"></i>
+            <i class="fas fa-star" style="color: #ffd700;"></i>
+            <i class="fas fa-star" style="color: #ffd700;"></i>
+            <i class="fas fa-star" style="color: #ffd700;"></i>
+            <i class="fas fa-star" style="color: #ffd700;"></i>
         </p>
     </div>
 </section>
 
+<!-- MENSAGEM FINAL -->
+<section class="section">
+    <div class="card" style="background: linear-gradient(135deg, rgba(255,77,109,0.2), rgba(114,9,183,0.2));">
+        <h2><i class="fas fa-infinity"></i> Para Sempre <i class="fas fa-infinity"></i></h2>
+        <p style="font-size: 1.5rem; line-height: 1.8;">
+            Que esta homenagem possa eternizar um pouco do que você representa.<br>
+            <strong>Ana Maria, você é simplesmente inesquecível.</strong>
+        </p>
+        <div style="font-size: 3rem; margin-top: 30px;">
+            💖 ✨ 🌹
+        </div>
+    </div>
+</section>
+
 <footer>
-    Criado com profunda intensidade, admiração e ❤️
+    <i class="fas fa-heart" style="color: #ff4d6d;"></i>
+    Criado com profunda intensidade, admiração e amor eterno
+    <i class="fas fa-heart" style="color: #ff4d6d;"></i>
+    <br>
+    <span style="font-size: 0.9rem; opacity: 0.7;">Para você, Ana Maria 💕</span>
 </footer>
 
 <script>
+// Função para criar corações flutuantes
 function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
-    heart.innerHTML = "❤️";
+    
+    const hearts = ["❤️", "💖", "💕", "💗", "💓", "💘", "💝"];
+    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+    
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    heart.style.animationDuration = (Math.random() * 4 + 3) + "s";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    
     document.body.appendChild(heart);
 
     setTimeout(() => {
         heart.remove();
-    }, 5000);
+    }, 6000);
 }
 
-setInterval(createHeart, 300);
+// Função para criar estrelas cadentes
+function createShootingStar() {
+    const star = document.createElement("div");
+    star.classList.add("star");
+    
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 30 + "vh";
+    star.style.animationDuration = (Math.random() * 2 + 1) + "s";
+    star.style.boxShadow = "0 0 10px 2px rgba(255, 255, 255, 0.8)";
+    
+    document.body.appendChild(star);
+
+    setTimeout(() => {
+        star.remove();
+    }, 3000);
+}
+
+// Função para mensagem especial
+function mostrarMensagem() {
+    const mensagens = [
+        "💖 Ana Maria, você é simplesmente perfeita! 💖",
+        "✨ Uma mulher única, especial e inesquecível! ✨",
+        "🌹 Seu sorriso ilumina o mundo! 🌹",
+        "🌟 Você merece todo amor e admiração! 🌟",
+        "💕 Inteligente, linda e carismática! 💕"
+    ];
+    
+    const mensagem = mensagens[Math.floor(Math.random() * mensagens.length)];
+    
+    // Criar um alert personalizado
+    const alertDiv = document.createElement("div");
+    alertDiv.style.position = "fixed";
+    alertDiv.style.top = "50%";
+    alertDiv.style.left = "50%";
+    alertDiv.style.transform = "translate(-50%, -50%)";
+    alertDiv.style.background = "linear-gradient(135deg, #ff4d6d, #9d4edd)";
+    alertDiv.style.color = "white";
+    alertDiv.style.padding = "30px 50px";
+    alertDiv.style.borderRadius = "20px";
+    alertDiv.style.fontSize = "1.8rem";
+    alertDiv.style.fontWeight = "bold";
+    alertDiv.style.zIndex = "10000";
+    alertDiv.style.boxShadow = "0 20px 40px rgba(0,0,0,0.5)";
+    alertDiv.style.border = "2px solid rgba(255,255,255,0.5)";
+    alertDiv.style.textAlign = "center";
+    alertDiv.style.animation = "float 0.5s ease";
+    alertDiv.innerHTML = mensagem;
+    
+    document.body.appendChild(alertDiv);
+    
+    setTimeout(() => {
+        alertDiv.style.opacity = "0";
+        alertDiv.style.transition = "opacity 0.5s ease";
+        setTimeout(() => {
+            alertDiv.remove();
+        }, 500);
+    }, 3000);
+}
+
+// Iniciar animações
+setInterval(createHeart, 200);
+setInterval(createShootingStar, 800);
+
+// Adicionar interatividade extra
+document.addEventListener('mousemove', function(e) {
+    if (Math.random() > 0.95) {
+        createHeart();
+    }
+});
+
+// Efeito de brilho nos corações ao passar o mouse
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.boxShadow = '0 40px 80px rgba(255, 77, 109, 0.3)';
+    });
+    card.addEventListener('mouseleave', function() {
+        this.style.boxShadow = '0 30px 60px rgba(0, 0, 0, 0.5)';
+    });
+});
 </script>
 
 </body>
