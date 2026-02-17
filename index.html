@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ana Maria ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #3a0ca3, #7209b7);
+    color: white;
+    overflow-x: hidden;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, #ff4d6d, #ffd6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    max-width: 700px;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.poema {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.7;
+}
+
+/* CORAÇÕES */
+.heart {
+    position: fixed;
+    top: -10px;
+    color: #ff4d6d;
+    font-size: 20px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ff4d6d, #ff758f);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+
+<!-- MÚSICA -->
+<audio autoplay loop>
+    <source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav" type="audio/wav">
+</audio>
+
+<section class="hero">
+    <h1>Ana Maria: Uma Homenagem Especial ❤️</h1>
+    <p>
+        Ana Maria transcende a beleza convencional; ela é uma presença marcante. Sua inteligência vai além do comum, revelando uma mente verdadeiramente brilhante. Mais do que carismática, ela irradia uma energia contagiante que transforma positivamente qualquer ambiente.
+    </p>
+    <button onclick="alert('Você é simplesmente incrível 💖')">
+        Você é Única
+    </button>
+</section>
+
+<section class="section">
+    <div class="card">
+        <h2>Sobre Ana Maria ✨</h2>
+        <p>
+            Com uma beleza que ilumina qualquer espaço, Ana Maria possui uma mente admirável e um carisma que desarma com um sorriso. Formada em Recursos Humanos, sua verdadeira especialidade reside na capacidade ímpar de tocar corações e inspirar a todos ao seu redor.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="card">
+        <h2>Poema para Ana: A Essência da Perfeição 🌹</h2>
+        <div class="poema">
+            Se a perfeição pudesse ser traduzida em nome,<br>
+            Ana Maria seria sua mais pura forma.<br><br>
+
+            Em seus olhos, o infinito se revela,<br>
+            em seu sorriso, um abrigo que nos anela.<br><br>
+
+            Sua inteligência é a luz que nos guia,<br>
+            seu carisma, a mais doce melodia.<br><br>
+
+            E se o amor fosse uma arte a ser ensinada,<br>
+            Ana Maria seria a mestra mais amada.
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="card">
+        <h2>Uma Referência Inspiradora 🔥</h2>
+        <p style="font-size:1.3rem;">
+            “Algumas mulheres são raras. Outras são extraordinárias. E então, existe Ana Maria, que transcende a todos, alcançando um patamar onde poucos chegam.”
+        </p>
+    </div>
+</section>
+
+<footer>
+    Criado com profunda intensidade, admiração e ❤️
+</footer>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
